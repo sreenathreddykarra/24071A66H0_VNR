@@ -1,12 +1,16 @@
-def fib(n):
-    if n==0:
-        return 0
-    elif n==1:
-        return 1
-    else:
-        return fib(n-1)+fib(n-2)
-    
-    
-a=int(input("Enter a number: "))
-for i in range(0,a):
-    print("The fibonacci of",i, "is",fib(i))
+import numpy as np
+
+zeros_array = np.zeros((5, 5))
+
+print("Array of Zeros:")
+print(zeros_array)
+
+ones_array = np.ones((5, 5))
+
+print("Array of Ones:")
+print(ones_array)
+
+constant_array = np.full((5, 5), 7)
+
+print("Array of Constant 7:")
+print(constant_array)

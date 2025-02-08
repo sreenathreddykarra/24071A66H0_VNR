@@ -1,17 +1,15 @@
-def lcm(m,n):
-    if(m-n>0):
-        max=m
-    else:
-        max=n
-    lcm=max
-    while(lcm % m !=0) or (lcm%n !=0):
-        lcm+=max
-    return lcm
+import numpy as np
 
+my_array = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+max_value = np.max(my_array)
 
-x=int(input("Enter the number 1:"))
-y=int(input("Enter the number 2:"))
+min_value = np.min(my_array)
 
-print("The lcm of the two numbers is:",lcm(x,y))
-gcd=(x*y)/lcm(x,y)
-print("The gcd of the two numbers is:",int(gcd))
+mean_value = np.mean(my_array)
+
+print("NumPy Array:")
+print(my_array)
+
+print("\nMaximum Value:", max_value)
+print("Minimum Value:", min_value)
+print("Mean Value:", mean_value)

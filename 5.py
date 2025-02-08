@@ -1,10 +1,11 @@
-def rem_dups(input_list):
-    return list(set(input_list))
+import numpy as np
 
-input_list = input("Enter a list of numbers separated by spaces: ").split()
-input_list = [int(num) for num in input_list] 
+my_array = np.array([1, 2, 2, 3, 4, 4, 5, 6, 6, 7, 8, 8, 9, 9, 9])
 
-result = rem_dups(input_list)
-print(f"Original list: {input_list}")
-print(f"List after removing duplicates: {result}")
+unique_elements = np.unique(my_array)
 
+print("Original Array:")
+print(my_array)
+
+print("Unique Elements:")
+print(unique_elements)

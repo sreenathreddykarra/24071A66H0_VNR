@@ -1,17 +1,16 @@
-def repeated(text):
+import pandas as pd
 
-    text = ''.join(char.lower() if char.isalnum() else ' ' for char in text)
-    words = text.split()
+df1 = pd.DataFrame({
+    'ROLL NUMBER': ['24071A66G8','24071A66G9','24071A66H0','24071A66H1'],
+    'Name': ['Pallavi', 'Praneeth', 'Sreenath', 'Nanditha']
+})
 
-    count = {}
-    for word in words:
-        if word in count:
-            count[word] += 1
-        else:
-            count[word] = 1
+df2 = pd.DataFrame({
+   'ROLL NUMBER': ['24071A66H2','24071A66H3','24071A66H0','24071A66H1'],
+    'Age': [18, 19, 18, 17]
+})
 
-    repeated = max(count, key=count.get)
-    return repeated, count[repeated]
+merged_df = pd.merge(df1, df2, on='ROLL NUMBER', how='inner')
 
-text = "Hello How are you brother? I am fine brother!! What about u brother and how is ur brother?"
-print(repeated(text))  
+print("Merged DataFrame:")
+print(merged_df)

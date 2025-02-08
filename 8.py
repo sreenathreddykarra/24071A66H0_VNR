@@ -1,14 +1,13 @@
 import pandas as pd
 
-cricketers_data = {
-    'Index': [1, 2, 3, 4, 5],
-    'Name': ['David Warner', 'Kane Williamson', 'Steve Smith','Virat Kohli', 'Babar Azam'],
-    'ICC Ranking': [1, 2, 3, 9, 4],
-    'Highest Score': [335, 242, 239, 254, 196]
+# Create a dictionary
+data = {
+    'Name': ['Sreenath', 'Bobby', 'Paardhu', 'Kamal'],
+    'Age': [18, 19, 18, 17],
+    'City': ['Karimnagar', 'Hyderabad', 'Warangal', 'Nizamabad']
 }
 
-df = pd.DataFrame(cricketers_data)
-df.index+=1
-df.to_csv('cricketers.csv', index=False)
-df_read = pd.read_csv('cricketers.csv')
-print(df_read.head())
+df_from_dict = pd.DataFrame(data)
+
+print("DataFrame from Dictionary:")
+print(df_from_dict)

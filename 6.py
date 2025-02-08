@@ -1,10 +1,4 @@
-dict_1={
-    "Name": "Sreenath",
-    "Branch":"Aiml",
-    "section":"C",
-    "goal":"AI Engineer",
-    "Strengths":"Self-Confidence"
-}
+import numpy as np
 
-for i,j in dict_1.items():
-    print(f"{i}: {j}")
+random_matrix = np.random.randint(0, 10, (5, 5))
+print(random_matrix)

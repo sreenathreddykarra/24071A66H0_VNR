@@ -1,19 +1,10 @@
 import numpy as np
 
-matrix1 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-matrix2 = np.array([[9, 8, 7], [6, 5, 4], [3, 2, 1]])
+random_matrix = np.random.randint(0, 10, (5, 5))
 
-addition = np.add(matrix1, matrix2)
-print("Matrix Addition:\n", addition)
+print("Random Matrix:")
+print(random_matrix)
 
-subtraction = np.subtract(matrix1, matrix2)
-print("Matrix Subtraction:\n", subtraction)
-
-multiplication = np.multiply(matrix1, matrix2)
-print("Matrix Multiplication (Element-wise):\n", multiplication)
-
-dot_product = np.dot(matrix1, matrix2)
-print("Matrix Dot Product:\n", dot_product)
-
-transpose = np.transpose(matrix1)
-print("Matrix Transpose:\n", transpose)
+element = random_matrix[2, 3]
+print("\nExtracted Element:")
+print(element)
